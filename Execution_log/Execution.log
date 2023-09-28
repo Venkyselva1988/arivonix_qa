@@ -1,0 +1,220 @@
+2023-06-26 16:34:18,662 +0530 [main] INFO  (testbase.java:339) - Open Chromedriver
+2023-06-26 16:34:20,732 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 16:34:24,162 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163424.png
+2023-06-26 16:34:26,295 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 16:34:26,552 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163426.png
+2023-06-26 16:34:28,381 +0530 [main] INFO  (common_function.java:114) - click Accessories tab
+2023-06-26 16:34:28,619 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163428.png
+2023-06-26 16:34:29,262 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163429.png
+2023-06-26 16:34:33,279 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163433.png
+2023-06-26 16:34:33,279 +0530 [main] INFO  (common_function.java:207) - Move control to new tab
+2023-06-26 16:34:33,522 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163433.png
+2023-06-26 16:34:33,567 +0530 [main] INFO  (common_function.java:114) - Add product to cart
+2023-06-26 16:34:33,797 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163433.png
+2023-06-26 16:34:34,037 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163434.png
+2023-06-26 16:34:34,038 +0530 [main] INFO  (common_function.java:144) - Verify cart countFailed
+2023-06-26 16:34:36,260 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 16:34:38,405 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 16:34:41,699 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163441.png
+2023-06-26 16:34:41,790 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 16:34:42,049 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163442.png
+2023-06-26 16:34:42,277 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163442.png
+2023-06-26 16:34:42,278 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),'Accessories')][@role='tab']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18556, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e733787c-9dc2-47d9-827b-73703e2b6ddb
+*** Element info: {Using=xpath, value=//a[contains(text(),'Accessories')][@role='tab']}
+2023-06-26 16:34:42,470 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023163442.png
+2023-06-26 16:34:42,656 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 16:34:42,659 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 16:34:42,662 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 16:34:42,665 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 16:34:42,666 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 21:57:42,549 +0530 [main] INFO  (testbase.java:339) - Open Chromedriver
+2023-06-26 21:57:45,458 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 21:57:45,637 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 21:57:45,638 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 21:57:45,639 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 21:57:45,640 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 21:57:45,641 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:03:12,873 +0530 [main] INFO  (testbase.java:339) - Open Chromedriver
+2023-06-26 22:03:15,301 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 22:03:15,556 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:03:15,558 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:03:15,560 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:03:15,562 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:03:15,564 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:05:39,467 +0530 [main] INFO  (testbase.java:340) - Open Chromedriver
+2023-06-26 22:05:41,498 +0530 [main] INFO  (testbase.java:356) - Open Firefox
+2023-06-26 22:05:41,701 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:05:41,702 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:05:41,706 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:05:41,708 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:05:41,709 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:07:35,475 +0530 [main] INFO  (testbase.java:356) - Open Firefox
+2023-06-26 22:07:37,481 +0530 [main] INFO  (testbase.java:356) - Open Firefox
+2023-06-26 22:07:37,660 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:07:37,660 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:07:37,661 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:07:37,662 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:07:37,663 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:29:48,095 +0530 [main] INFO  (testbase.java:356) - Open Firefox
+2023-06-26 22:30:24,905 +0530 [main] INFO  (testbase.java:356) - Open Firefox
+2023-06-26 22:30:48,770 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:30:48,772 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:30:48,773 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:30:48,774 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:30:48,775 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:31:42,236 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 22:31:44,946 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 22:31:48,431 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223148.png
+2023-06-26 22:31:48,546 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 22:31:49,028 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223149.png
+2023-06-26 22:31:49,346 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223149.png
+2023-06-26 22:31:49,347 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),'Accessories')][@role='tab']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8944, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ae2c611b-c366-44c9-8d9c-76163c521577
+*** Element info: {Using=xpath, value=//a[contains(text(),'Accessories')][@role='tab']}
+2023-06-26 22:31:49,656 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223149.png
+2023-06-26 22:31:50,539 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223150.png
+2023-06-26 22:31:50,544 +0530 [main] INFO  (common_function.java:144) - open accessories which is lesser than 500.Failed
+2023-06-26 22:31:50,957 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223150.png
+2023-06-26 22:31:51,337 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223151.png
+2023-06-26 22:31:51,721 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223151.png
+2023-06-26 22:31:51,722 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8944, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ae2c611b-c366-44c9-8d9c-76163c521577
+*** Element info: {Using=xpath, value=//span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']}
+2023-06-26 22:31:52,097 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223152.png
+2023-06-26 22:31:52,439 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223152.png
+2023-06-26 22:31:52,444 +0530 [main] INFO  (common_function.java:144) - Verify cart countFailed
+2023-06-26 22:31:52,662 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223152.png
+2023-06-26 22:31:54,736 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 22:31:57,374 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 22:32:00,861 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223200.png
+2023-06-26 22:32:00,970 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 22:32:01,417 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223201.png
+2023-06-26 22:32:01,973 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223201.png
+2023-06-26 22:32:01,974 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),'Accessories')][@role='tab']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10076, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 22a44335-04ca-438d-b7d2-6e483e9e40f2
+*** Element info: {Using=xpath, value=//a[contains(text(),'Accessories')][@role='tab']}
+2023-06-26 22:32:02,282 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223202.png
+2023-06-26 22:32:02,842 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223202.png
+2023-06-26 22:32:02,843 +0530 [main] INFO  (common_function.java:150) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class='a-price-whole']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10076, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 22a44335-04ca-438d-b7d2-6e483e9e40f2
+*** Element info: {Using=xpath, value=//span[@class='a-price-whole']}
+2023-06-26 22:32:03,235 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223203.png
+2023-06-26 22:32:03,475 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223203.png
+2023-06-26 22:32:03,715 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223203.png
+2023-06-26 22:32:03,715 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10076, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 22a44335-04ca-438d-b7d2-6e483e9e40f2
+*** Element info: {Using=xpath, value=//span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']}
+2023-06-26 22:32:03,895 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223203.png
+2023-06-26 22:32:04,182 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223204.png
+2023-06-26 22:32:04,183 +0530 [main] INFO  (common_function.java:144) - Verify cart countFailed
+2023-06-26 22:32:04,456 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223204.png
+2023-06-26 22:32:04,665 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:32:04,672 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:32:04,674 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:32:04,676 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:32:04,676 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-26 22:33:40,774 +0530 [main] INFO  (testbase.java:339) - Open Chromedriver
+2023-06-26 22:34:01,613 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 22:34:04,876 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223404.png
+2023-06-26 22:34:07,460 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 22:34:07,683 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223407.png
+2023-06-26 22:34:09,608 +0530 [main] INFO  (common_function.java:114) - click Accessories tab
+2023-06-26 22:34:09,837 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223409.png
+2023-06-26 22:34:10,098 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223410.png
+2023-06-26 22:34:10,099 +0530 [main] INFO  (common_function.java:144) - open accessories which is lesser than 500.Failed
+2023-06-26 22:34:10,367 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223410.png
+2023-06-26 22:34:10,586 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223410.png
+2023-06-26 22:34:10,856 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223410.png
+2023-06-26 22:34:10,857 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\VENKAT~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 53e7a63047c1df1bada844d654bc1e48
+*** Element info: {Using=xpath, value=//span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']}
+2023-06-26 22:34:11,059 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223411.png
+2023-06-26 22:34:11,317 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223411.png
+2023-06-26 22:34:11,317 +0530 [main] INFO  (common_function.java:144) - Verify cart countFailed
+2023-06-26 22:34:11,560 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223411.png
+2023-06-26 22:34:13,615 +0530 [main] INFO  (testbase.java:355) - Open Firefox
+2023-06-26 22:34:26,188 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-06-26 22:34:29,551 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223429.png
+2023-06-26 22:34:29,615 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-06-26 22:34:29,967 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223429.png
+2023-06-26 22:34:30,284 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223430.png
+2023-06-26 22:34:30,284 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(text(),'Accessories')][@role='tab']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2564, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 23f60b9d-a964-4492-8323-aaef2cef884a
+*** Element info: {Using=xpath, value=//a[contains(text(),'Accessories')][@role='tab']}
+2023-06-26 22:34:30,597 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223430.png
+2023-06-26 22:34:30,850 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223430.png
+2023-06-26 22:34:30,851 +0530 [main] INFO  (common_function.java:150) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class='a-price-whole']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2564, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 23f60b9d-a964-4492-8323-aaef2cef884a
+*** Element info: {Using=xpath, value=//span[@class='a-price-whole']}
+2023-06-26 22:34:30,972 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223430.png
+2023-06-26 22:34:31,246 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223431.png
+2023-06-26 22:34:31,436 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223431.png
+2023-06-26 22:34:31,437 +0530 [main] INFO  (common_function.java:119) - org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FG7QG1S', ip: '192.168.101.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2564, moz:profile: C:\Users\VENKAT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 23f60b9d-a964-4492-8323-aaef2cef884a
+*** Element info: {Using=xpath, value=//span[contains(text(),'Add to Cart')][@id='submit.add-to-cart-announce']}
+2023-06-26 22:34:31,603 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223431.png
+2023-06-26 22:34:31,759 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223431.png
+2023-06-26 22:34:31,760 +0530 [main] INFO  (common_function.java:144) - Verify cart countFailed
+2023-06-26 22:34:31,897 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\26062023\26062023223431.png
+2023-06-26 22:34:32,009 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2023-06-26 22:34:32,010 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2023-06-26 22:34:32,011 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-06-26 22:34:32,012 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-06-26 22:34:32,012 +0530 [main] DEBUG (_Log4jLoggerFactory.java:44) - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Venkateshwaran/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-09-28 15:27:06,325 +0530 [main] INFO  (testbase.java:339) - Open Chromedriver
+2023-09-28 15:31:21,519 +0530 [main] INFO  (common_function.java:55) - Open WebsiteHttp://www.amazon.in
+2023-09-28 15:31:25,471 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\28092023\28092023153125.png
+2023-09-28 15:31:38,930 +0530 [main] INFO  (common_function.java:114) - click mobile category
+2023-09-28 15:31:39,163 +0530 [main] INFO  (testbase.java:296) - Screenshot taken and added in destinationF:\SQA_demo\Nallas_demoproject\Output_Report\28092023\28092023153139.png
