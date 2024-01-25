@@ -26,6 +26,7 @@ import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,6 +42,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.zaproxy.clientapi.core.ClientApi;
 
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
@@ -116,6 +118,19 @@ public class testbase
 	public static Recordset  teststep;
 	public static String temp_value="";
 	public static String inputfilelocation="";
+	public static String website="";
+	public static String api_key="";
+	public static String zap_loc="";
+	public static String scanstatus="";
+	public static String Projectname="";
+	public static String Testcase_Type="";
+	public static String Executed_by ="";
+	public static String testid ="";
+	public static String teststatus ="";
+	public static String test_start_time="";
+	public static String test_end_time="";
+	public static String teamsmessage ="";
+	public static String TC_currentdate ="";
 	public static String returnTodayDateTime(String formate) 
 	{
 		DateFormat dateFormat = new SimpleDateFormat(formate);
@@ -204,15 +219,24 @@ public class testbase
 	    	}
 	    	else if(value.equalsIgnoreCase("firefox"))
 	    	{
+	    		log.info("Open Firefox");
 	    		String filename = returnTodayDateTime("ddMMYYYY-hhmmss.SSS");
 	    		extent = new ExtentReports(System.getProperty("user.dir")+"\\Output_Report\\Execution_Report\\Nallas_demo-"+filename+".html");
 	    		System.setProperty("webdriver.gecko.driver", path+"/Drivers/geckodriver.exe");
 	    		FirefoxOptions options = new FirefoxOptions();
 	    		
+	    		String ZAP_PROXY_ADDRESS = "localhost";
+	    		int ZAP_PROXY_PORT = 8080;
+	    		String ZAP_API_KEY = "1gtc2jti2if23npr7uk82g64dm";
+	    		String proxyServerUrl = ZAP_PROXY_ADDRESS + ":" + ZAP_PROXY_PORT; 
+	    		 Proxy proxy = new Proxy();
+	    		   proxy.setHttpProxy(proxyServerUrl); 
+	    		   proxy.setSslProxy(proxyServerUrl);
+	    		options.setAcceptInsecureCerts(true); 
+	    		options.setProxy(proxy); 
 	    		
-	    		
-	    		options.setCapability("marionette", true);
-	    		options.setCapability("Platform", org.openqa.selenium.Platform.ANY);
+	    		//options.setCapability("marionette", true);
+	    		//options.setCapability("Platform", org.openqa.selenium.Platform.ANY);
 
 	    		 driver = new FirefoxDriver(options); //Creating an object of FirefoxDriver
 	    				driver.manage().window().maximize();
@@ -230,6 +254,7 @@ public class testbase
 	    		 driver=new EdgeDriver();
 	    		 log.info("Open Edge");
 	    	}
+	    	website = link;
 	    	driver.get(link);
 	        
 	         driver.manage().window().maximize();
@@ -328,11 +353,19 @@ public class testbase
 	    	PropertyConfigurator.configure(logfile);
 	    	if(data.toLowerCase().contains("chrome"))
 	    	{
-	    		
+	    		String ZAP_PROXY_ADDRESS = "localhost";
+	    		int ZAP_PROXY_PORT = 8080;	    		
+	    	     String proxyServerUrl = ZAP_PROXY_ADDRESS + ":" + ZAP_PROXY_PORT; 
+	    		   Proxy proxy = new Proxy();
+	    		   proxy.setHttpProxy(proxyServerUrl); 
+	    		   proxy.setSslProxy(proxyServerUrl); 
 	    		
 	    	System.setProperty("webdriver.chrome.driver", path+"/Drivers/chromedriver.exe");
 	    	ChromeOptions option = new ChromeOptions();
 	    	option.addArguments("--disable-notifications");
+	    	option.setAcceptInsecureCerts(true); 
+	    	option.setProxy(proxy); 
+	    	
 	    	
 	    	driver = new ChromeDriver(option);
 	    	driver.manage().deleteAllCookies();
@@ -341,9 +374,21 @@ public class testbase
 	    	}
 	    	else if(data.toLowerCase().contains("firefox"))
 	    	{
+
+	    		String ZAP_PROXY_ADDRESS = "localhost";
+	    		int ZAP_PROXY_PORT = 8080;	    		
+	    	     String proxyServerUrl = ZAP_PROXY_ADDRESS + ":" + ZAP_PROXY_PORT; 
+	    		   Proxy proxy = new Proxy();
+	    		   proxy.setHttpProxy(proxyServerUrl); 
+	    		   proxy.setSslProxy(proxyServerUrl); 
 	    		
 	    		System.setProperty("webdriver.gecko.driver", path+"/Drivers/geckodriver.exe");
 	    		FirefoxOptions options = new FirefoxOptions();
+	    		options.addArguments("--disable-notifications");
+	    		options.setAcceptInsecureCerts(true); 
+	    		options.setProxy(proxy); 
+		    	
+		    	
 	    		
 	    		
 	    		

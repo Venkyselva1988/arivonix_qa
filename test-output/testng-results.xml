@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-02T07:35:58Z" name="Command line suite" finished-at="2024-01-02T07:38:11Z" duration-ms="133085">
+    <groups>
+    </groups>
+    <test started-at="2024-01-02T07:35:58Z" name="Command line test" finished-at="2024-01-02T07:38:11Z" duration-ms="133085">
+      <class name="Nallas.Nallas_demoproject.Testcase_Execution">
+        <test-method is-config="true" signature="beforesuite()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:35:58Z" name="beforesuite" finished-at="2024-01-02T07:36:18Z" duration-ms="20769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforesuite -->
+        <test-method is-config="true" signature="setProxy_Zap(java.lang.reflect.Method)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:36:18Z" name="setProxy_Zap" finished-at="2024-01-02T07:36:18Z" duration-ms="41" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void Nallas.Nallas_demoproject.Testcase_Execution.TC(java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setProxy_Zap -->
+        <test-method signature="TC(java.lang.String)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:36:18Z" name="TC" data-provider="TCList" finished-at="2024-01-02T07:37:06Z" duration-ms="47710" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TC_100~To add mobile Access~Yes~Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC -->
+        <test-method is-config="true" signature="stoprecord()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:06Z" name="stoprecord" finished-at="2024-01-02T07:37:07Z" duration-ms="837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stoprecord -->
+        <test-method is-config="true" signature="setProxy_Zap(java.lang.reflect.Method)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:07Z" name="setProxy_Zap" finished-at="2024-01-02T07:37:07Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void Nallas.Nallas_demoproject.Testcase_Execution.TC(java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setProxy_Zap -->
+        <test-method signature="TC(java.lang.String)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:07Z" name="TC" data-provider="TCList" finished-at="2024-01-02T07:37:56Z" duration-ms="49150" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TC_101~To add mobile Access~Yes~Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC -->
+        <test-method is-config="true" signature="stoprecord()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:56Z" name="stoprecord" finished-at="2024-01-02T07:37:56Z" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stoprecord -->
+        <test-method signature="TC(java.lang.String)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:56Z" name="TC" data-provider="TCList" finished-at="2024-01-02T07:37:57Z" duration-ms="829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TC_102~To add mobile Access~No~Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC -->
+        <test-method is-config="true" signature="setProxy_Zap(java.lang.reflect.Method)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:56Z" name="setProxy_Zap" finished-at="2024-01-02T07:37:56Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void Nallas.Nallas_demoproject.Testcase_Execution.TC(java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setProxy_Zap -->
+        <test-method is-config="true" signature="stoprecord()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:57Z" name="stoprecord" finished-at="2024-01-02T07:37:57Z" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stoprecord -->
+        <test-method signature="TC(java.lang.String)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:57Z" name="TC" data-provider="TCList" finished-at="2024-01-02T07:37:58Z" duration-ms="850" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TC_103~To add mobile Access~No~Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC -->
+        <test-method is-config="true" signature="setProxy_Zap(java.lang.reflect.Method)[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:57Z" name="setProxy_Zap" finished-at="2024-01-02T07:37:57Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void Nallas.Nallas_demoproject.Testcase_Execution.TC(java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setProxy_Zap -->
+        <test-method is-config="true" signature="stoprecord()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:58Z" name="stoprecord" finished-at="2024-01-02T07:37:58Z" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stoprecord -->
+        <test-method is-config="true" signature="endtest()[pri:0, instance:Nallas.Nallas_demoproject.Testcase_Execution@48974e45]" started-at="2024-01-02T07:37:58Z" name="endtest" finished-at="2024-01-02T07:38:11Z" duration-ms="12202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endtest -->
+      </class> <!-- Nallas.Nallas_demoproject.Testcase_Execution -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

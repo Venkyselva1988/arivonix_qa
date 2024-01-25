@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Nallas.Nallas_demoproject.TestBase.testbase"/>
-      <class name="Nallas.Nallas_demoproject.Testcase_Execution"/>
+      <class name="Nallas.Nallas_demoproject.Testcase_Execution"/>       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
