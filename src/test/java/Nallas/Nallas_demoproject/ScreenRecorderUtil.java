@@ -18,7 +18,8 @@ import org.monte.screenrecorder.ScreenRecorder;
 import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
-public class ScreenRecorderUtil extends ScreenRecorder {
+public class ScreenRecorderUtil extends ScreenRecorder 
+{
  public static ScreenRecorder screenRecorder;
  public String name;
  public ScreenRecorderUtil(GraphicsConfiguration cfg, Rectangle captureArea, Format fileFormat,

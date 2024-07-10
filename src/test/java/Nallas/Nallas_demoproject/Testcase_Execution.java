@@ -19,7 +19,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -59,20 +68,24 @@ import org.zaproxy.clientapi.core.ClientApi;
 import org.zaproxy.clientapi.core.ClientApiException;
 import org.zaproxy.zap.extension.api.ApiResponse;
 
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResultsSummary;
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
-import Nallas.Nallas_demoproject.Testcase;
-import Nallas.Nallas_demoproject.TestBase.testbase;
+
+import Nallas.Nallas_demoproject.TestBase.testexecutionbase;
+
 import net.continuumsecurity.proxy.Spider;
 import net.continuumsecurity.proxy.ZAProxyScanner;
 
 
 
-public class Testcase_Execution extends testbase
+public class Testcase_Execution extends testexecutionbase
 {
 	
 	// Change the value to run in different browser: firefox, edge
@@ -87,11 +100,24 @@ public class Testcase_Execution extends testbase
    	     extent = new ExtentReports(System.getProperty("user.dir")+"\\Output_Report\\Execution_Report\\Execution_report-"+date+".html");
    	  Fillo fillo = new Fillo();
 		System.out.println("Size: " + "test");
-		inputfilelocation = System.getProperty("user.dir")+"\\Input\\Automation_input.xlsx";
+		inputfilelocation = System.getProperty("user.dir")+"\\Input\\Execution_input.xlsx";
 		Connection connection = fillo.getConnection(inputfilelocation);
+		System.out.println("scan status: " + inputfilelocation);
 		Recordset recordset = connection.executeQuery("SELECT * FROM Configuration");
+		Projectname ="Verisk";
+		 Testcase_Type = "Regression";
+		 Executed_by = "Venkat";
+		  TC_currentdate = new SimpleDateFormat("ddMMyyyy").format(Calendar.getInstance().getTime());
+		 
+		while (recordset.next()) 
+		{
+			api_key = recordset.getField("APIKEY");
+			zap_loc = recordset.getField("ZAPTOOL_Location");
+			scanstatus = recordset.getField("Security_scan"); 
+		}		
 		
-		scanstatus = recordset.getField("Security_scan"); 
+		
+		System.out.println("scan status: " + scanstatus);
 		
 		if(scanstatus.equalsIgnoreCase("Yes"))
 		{
@@ -100,11 +126,7 @@ public class Testcase_Execution extends testbase
 		ArrayList<String> newobj = new ArrayList<String>();
 		//String[] newobj = new String[numberOfRows];
 	
-		while (recordset.next()) 
-		{
-			api_key = recordset.getField("APIKEY");
-			zap_loc = recordset.getField("ZAPTOOL_Location");
-		}		
+		
 		try
 		{
 			
@@ -121,10 +143,6 @@ public class Testcase_Execution extends testbase
 		     Process p = pb.start();
 			Thread.sleep(20000);
 			 System.out.println("test");
-			 Projectname ="Verisk";
-			 Testcase_Type = "Regression";
-			 Executed_by = "Venkat";
-			  TC_currentdate = new SimpleDateFormat("ddMMyyyy").format(Calendar.getInstance().getTime());
 			 
 			
 		}
@@ -133,6 +151,11 @@ public class Testcase_Execution extends testbase
 		{
 			System.out.println("errr"+e.toString());
 		}
+		}
+		
+		else
+		{
+			System.out.println("scan status: " +"Disabled");
 		}
 	}
 	
@@ -153,6 +176,9 @@ public class Testcase_Execution extends testbase
 	public void setProxy_Zap(Method method) throws Exception 
 	
 		 {
+		
+		
+		
 		if(scanstatus.equalsIgnoreCase("yes"))
 		{
 		String ZAP_PROXY_ADDRESS = "localhost";
@@ -163,6 +189,11 @@ public class Testcase_Execution extends testbase
 		   api = new ClientApi(ZAP_PROXY_ADDRESS, ZAP_PROXY_PORT, ZAP_API_KEY);
 	
 		 }
+		
+		else
+		{
+			System.out.println("no proxy");
+		}
 		 }
 	
 	
@@ -172,7 +203,7 @@ public class Testcase_Execution extends testbase
 		
 		Fillo fillo = new Fillo();
 		System.out.println("Size: " + "test");
-		inputfilelocation = System.getProperty("user.dir")+"\\Input\\Automation_input.xlsx";
+		inputfilelocation = System.getProperty("user.dir")+"\\Input\\Execution_input.xlsx";
 		Connection connection = fillo.getConnection(inputfilelocation);
 		Recordset recordset = connection.executeQuery("SELECT * FROM Execution");
 		int numberOfRows = recordset.getCount();
@@ -191,9 +222,11 @@ public class Testcase_Execution extends testbase
 			String finalstring = testcase_id+"~"+testcase_description+"~"+testcase_Execution+"~"+browser;
 		   data[i] = finalstring;
 		   i++;
-			System.out.println(finalstring);		  
+			System.out.println(finalstring);
+			
 						
 		}		
+		recordset.close();
 		return data;
 	}
 	
@@ -205,7 +238,9 @@ public class Testcase_Execution extends testbase
 	@Test (dataProvider = "TCList")
 	public static void TC(String list) throws Exception
 	{
-		
+		try
+		{
+		System.out.println("testcase test");
 		String[] listinfo = list.split("~");
 		System.out.println("testcase test"+listinfo[0]);
 		String timeStamp_start = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
@@ -218,6 +253,7 @@ public class Testcase_Execution extends testbase
 			System.out.println("testcase"+listinfo[3]);
 			invoke_browser(listinfo[3]);
 			test = extent.startTest(listinfo[0]);
+			
 			ScreenRecorderUtil.startRecord("TestExecution"+testcase_id);
 			
 			if(listinfo[2].toLowerCase().equalsIgnoreCase("yes"))
@@ -240,7 +276,11 @@ public class Testcase_Execution extends testbase
 		  		teststatus = "Failed";
 		  		test.log(LogStatus.FAIL, "Testcase ID: "+listinfo[0]+" completed  -Status: Failed");
 		  	}
-		  	
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+		}
 		  	ScreenRecorderUtil.stopRecord();
 	}
 	
@@ -252,7 +292,7 @@ public class Testcase_Execution extends testbase
 		
 		driver.quit();
 		     
-		     teamsmessage+= "<tr><td>"+testid+"</td><td>"+teststatus+"</td><td>"+test_start_time+"</td><td>"+test_end_time+"</td></tr>";
+		     teamsmessage+= "<table width='100%' border='1' align='center'>"+"<tr><td>"+testid+"</td><td>"+teststatus+"</td><td>"+test_start_time+"</td><td>"+test_end_time+"</td></tr>";
 		  
 		 }
 	
@@ -312,9 +352,73 @@ public class Testcase_Execution extends testbase
 		Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe");
 		Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		dynamicvalue = "";
-		Sendnotification();
+		//Sendnotification();
+		//sendmail();
 	}
 
+
+
+//@SuppressWarnings("static-access")
+//public static void sendmail() 
+//{
+//	
+//		
+//		try
+//		{
+//		 final String username = "venky84.selva@gmail.com";
+//	        final String password = "Selva@123";
+//	        
+//	       
+//	        
+//	        //System.setProperty("javax.net.ssl.trustStore", "C:\\Users\\Venkateshwaran\\Desktop\\privateKeystore.cer");
+//	        Properties props = new Properties();    
+//	          props.put("mail.smtp.host", "smtp.gmail.com");       
+//	         // props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");    
+//	        // props.put("mail.smtp.auth", "true");    
+//	          props.put("mail.smtp.port", "465");    
+//	          //get Session   
+//	          Session session = Session.getDefaultInstance(props,    
+//	           new javax.mail.Authenticator() {    
+//	           protected PasswordAuthentication getPasswordAuthentication() {    
+//	           return new PasswordAuthentication(username,password);  
+//	           }    
+//	          });    
+//	          
+//	          Properties propss = new Properties();
+//	            props.put("mail.transport.protocol", "smtp");
+//	            props.put("mail.smtp.starttls.enable", "true");
+//	            props.put("mail.smtp.auth", "true");
+//	            props.put("mail.smtp.host", "smtp.gmail.com");
+//	            props.put("mail.smtp.socketFactory.port", "465");
+//	            props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//
+//	            
+//	            javax.mail.Authenticator  authenticator = new javax.mail.Authenticator(username,password);
+//	            Session sessions = Session.getDefaultInstance(props, authenticator);
+//
+//	            sessions.setDebug(true);
+//
+//	          //compose message    
+//	          try {    
+//	        	  Message  message = new MimeMessage(sessions);    
+//	           message.addRecipient(Message.RecipientType.TO,new InternetAddress("venkateshwarans@nallas.com"));    
+//	           message.setSubject("Test mail");    
+//	           message.setText("Test Mail");    
+//	           Transport transport = sessions.getTransport();
+//	           //send message  
+//	           transport.send(message);    
+//	           System.out.println("message sent successfully");    
+//	          } 
+//	          catch (MessagingException e) 
+//	          {throw new RuntimeException(e);
+//	          }    
+//		}
+//		 catch (Exception e) 
+//        {System.out.println(e.toString());
+//        }   
+//	          }
+//	             
+	     
 
 public static void Sendnotification() {
 	

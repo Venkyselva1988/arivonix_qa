@@ -10,16 +10,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import Nallas.Nallas_demoproject.TestBase.testbase;
+
 
 
 import com.relevantcodes.extentreports.LogStatus;
+
 import Nallas.Nallas_demoproject.TestBase.common_function;
+import Nallas.Nallas_demoproject.TestBase.testexecutionbase;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 
-public class Testcase extends testbase
+public class Testcase extends testexecutionbase
 {
 
 	@FindBy(xpath="//p[@class='copyRight']")
@@ -60,19 +63,19 @@ public class Testcase extends testbase
 			String output = "Sum of the element from 1st position to "+find_index+"th position is "+sum_value;
 			System.out.println("Sum of the element from 1st position to "+find_index+"th position is"+sum_value);
 			logMessage_text(output);
-			log.info(output);
+			//log.info(output);
 		}
 		else
 		{
 			String output = "Matching array not found : Default value"+"-1";
 			logMessage_text(output);
 			System.out.println("-1");
-			log.info(output);
+			//log.info(output);
 		}
 		}
 		catch(Exception e)
 		{
-			log.info(e.toString());
+			//log.info(e.toString());
 		}
 	}
 	

@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -34,15 +34,23 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.EyesRunner;
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.selenium.ClassicRunner;
+import com.applitools.eyes.selenium.Configuration;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.selenium.fluent.Target;
+import com.applitools.eyes.visualgrid.services.RunnerOptions;
+import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import com.relevantcodes.extentreports.ExtentReports;
 
-public class common_function extends testbase
+public class common_function extends testexecutionbase
 
 {
 	
 	public common_function()
 	{
-		
 	}
 	
 	 
@@ -1328,7 +1336,43 @@ public class common_function extends testbase
 		log.info("Text field set value"+value);
 	}
 	
-	
+	public static void applitool_verification(String data,String xpath)
+	{
+		try
+		{
+			 ClassicRunner classicRunner = new ClassicRunner();
+			 Eyes eyes = new Eyes(classicRunner);
+			  Configuration config = eyes.getConfiguration();
+			  config.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
+			     BatchInfo BATCH = new BatchInfo("Nallas verification");
+			    config.setBatch(BATCH);
+			    eyes.open(driver,"Nallas contact us", data, new RectangleSize(1200, 1400));
+			Thread.sleep(8000);
+		WebElement ele = driver.findElement(By.xpath(xpath));
+		 System.out.println("verification"+xpath);
+		System.out.println("applitool method enabled");
+		Actions actn = new Actions(driver);
+		actn.moveToElement(ele).perform();
+		Thread.sleep(5000);
+		
+		//EyesRunner	runner = new VisualGridRunner(new RunnerOptions().testConcurrency(1));
+		
+        
+        System.out.println("verification start");
+       // eyes.check(Target.window().fully().withName("contact us verification"));
+        System.out.println("verification end"+data);
+        eyes.checkElement(ele,10000,data);
+        System.out.println("verification end 1");
+        Thread.sleep(8000);
+       // eyes.setSaveFailedTests(true);
+        eyes.closeAsync();
+        System.out.println("closed");
+		}
+		catch(Exception e)
+		{
+			System.out.println("demo");
+		}
+	}
 	
 	
 	
