@@ -5,7 +5,7 @@
     <classes>
       <class name="Nallas.Nallas_demoproject.Testcase_Execution">
         <methods>
-          <include name="TC"/>
+          <include name="TC" invocation-numbers="0"/>
           <include name="stoprecord"/>
           <include name="endtest"/>
           <include name="beforesuite"/>

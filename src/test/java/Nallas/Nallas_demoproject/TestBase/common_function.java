@@ -12,10 +12,12 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 //import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
@@ -71,11 +73,26 @@ public class common_function extends testexecutionbase
 	         
 	  }
 	  
-	  public static void Click(String data, String xpath)
+	  
+	  public static void staticwait(String data,String xpath) throws InterruptedException
+	  {
+		  int seconds = Integer.parseInt(data);
+		  seconds = seconds* 1000;
+		 Thread.sleep(seconds);
+		  
+	  }
+	  
+	  
+	  public static void Click(String data, String xpath) throws InterruptedException
 		{
 	       try
 	       {
+	    	   
+	       WebDriverWait wait = new WebDriverWait(driver,30);
+	    	wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));	   
 		  WebElement elemt = driver.findElement(By.xpath(xpath));
+		  JavascriptExecutor jse = (JavascriptExecutor) driver;
+	      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 		  elemt.click();
 		  log.info(teststep_description);
 	       }
@@ -84,18 +101,24 @@ public class common_function extends testexecutionbase
 	    	   Error_withScreenshot(e.toString());
 		    	log.info(e.toString());
 	       }
+	       
 	       if(Screenshot_required.equalsIgnoreCase("yes"))
 			  {
 				 
 				  logMessage_withScreenshot(teststep_description);
 			  }
+	       Thread.sleep(3000);
 		}
 	  
 	  public static void ActionClick(String data, String xpath)
 		{
 	      try
 	      {
+	    WebDriverWait wait = new WebDriverWait(driver,30);
+		  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		  WebElement elemt = driver.findElement(By.xpath(xpath));
+		  JavascriptExecutor jse = (JavascriptExecutor) driver;
+	      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 		  Actions actn = new Actions(driver);
 		  actn.click(elemt).perform();
 		  log.info(teststep_description);
@@ -112,11 +135,53 @@ public class common_function extends testexecutionbase
 		  }
 		}
 	  
+	  
+	  public static void alert_close(String data, String xpath)
+		{
+	      try
+	      {
+	    	  
+	    	  int i=0;
+	    	   while(i++<5)
+	    	   {
+	    	        try
+	    	        {
+	    	            Alert alert = driver.switchTo().alert();
+	    	            break;
+	    	        }
+	    	        catch(NoAlertPresentException e)
+	    	        {
+	    	          Thread.sleep(1000);
+	    	          continue;
+	    	        }
+	    	   }
+	    	  Alert alert1 = driver.switchTo().alert();
+	    	  alert1.dismiss();
+	   
+	      }
+	      catch(Exception e)
+	       {
+	    	   Error_withScreenshot(e.toString());
+		    	log.info(e.toString());
+	       }
+	      if(Screenshot_required.equalsIgnoreCase("yes"))
+		  {
+			 
+			  logMessage_withScreenshot(teststep_description);
+		  }
+		}
+	  
+	  
+	  
 	  public static void JavaScriptClick(String data, String xpath)
 			{
 		      try
 		      {
+		    WebDriverWait wait = new WebDriverWait(driver,30);
+			  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 			  WebElement elemt = driver.findElement(By.xpath(xpath));
+			  JavascriptExecutor jse = (JavascriptExecutor) driver;
+		      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 			  JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", elemt);
 				log.info(teststep_description);
@@ -134,12 +199,17 @@ public class common_function extends testexecutionbase
 			}
 	  
 	  
+	  
+	  
 	  public static void VerifyText_Equal(String data, String xpath)
 		{
 	    try
 	    {
+	    	
 		  WebElement elemt = driver.findElement(By.xpath(xpath));
 		  String actualvalue = elemt.getText();
+		  JavascriptExecutor jse = (JavascriptExecutor) driver;
+	      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 		  if(actualvalue.equalsIgnoreCase(data))
 		  {
 			  System.out.println("value matched");
@@ -370,7 +440,45 @@ public class common_function extends testexecutionbase
 			Actions actn = new Actions(driver);
 			System.out.println(data);
 			 WebElement elemt = driver.findElement(By.xpath(xpath));
+			 JavascriptExecutor jse = (JavascriptExecutor) driver;
+		      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 			actn.sendKeys(elemt, data).build().perform();
+			 log.info(teststep_description);
+			
+		   }
+		   catch (Exception e)
+		    {
+			Error_withScreenshot(e.toString());
+			log.info(e.toString());
+		     }
+			 if(Screenshot_required.equalsIgnoreCase("yes"))
+			  {
+				 
+				  logMessage_withScreenshot(teststep_description);
+			  }
+		}
+	  
+	  public static void ActionSendkeyvalue(String data,String xpath)
+		{
+			try
+			{
+			
+			Actions actn = new Actions(driver);
+			System.out.println(data);
+			 switch(data)
+			 {
+			 case "tab":
+				 actn.sendKeys(Keys.TAB).build().perform();
+				 break;
+			 case "enter":
+				 actn.sendKeys(Keys.ENTER).build().perform();
+				 break;
+			 case "downarrow":
+				 actn.sendKeys(Keys.ARROW_DOWN).build().perform();
+				 break;
+			 
+			 }
+			 Thread.sleep(3000);
 			 log.info(teststep_description);
 			
 		   }
@@ -390,9 +498,14 @@ public class common_function extends testexecutionbase
 		{
 			try
 			{
+				 WebDriverWait wait = new WebDriverWait(driver,30);
+				  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		
 			 WebElement elemt = driver.findElement(By.xpath(xpath));
+			 JavascriptExecutor jse = (JavascriptExecutor) driver;
+		      jse.executeScript("arguments[0].style.border='3px solid blue'", elemt);
 			 elemt.sendKeys(data);
+			 
 			 log.info(teststep_description);
 			
 		   }

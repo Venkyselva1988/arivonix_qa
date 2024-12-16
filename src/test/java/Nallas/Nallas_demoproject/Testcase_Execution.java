@@ -42,6 +42,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.log4j.PropertyConfigurator;
 import org.monte.media.Format;
 import org.monte.screenrecorder.ScreenRecorder;
 import org.openqa.selenium.Proxy;
@@ -108,7 +109,10 @@ public class Testcase_Execution extends testexecutionbase
 		 Testcase_Type = "Regression";
 		 Executed_by = "Venkat";
 		  TC_currentdate = new SimpleDateFormat("ddMMyyyy").format(Calendar.getInstance().getTime());
-		 
+		String root = System.getProperty("user.dir");
+			System.out.println(root+"\\src\\test\\java\\resource\\log4j.properties");
+			PropertyConfigurator.configure(root+"\\src\\test\\java\\resource\\log4j.properties");
+
 		while (recordset.next()) 
 		{
 			api_key = recordset.getField("APIKEY");
@@ -171,14 +175,9 @@ public class Testcase_Execution extends testexecutionbase
 	} 
 	
 	
-	
 	@BeforeMethod
 	public void setProxy_Zap(Method method) throws Exception 
-	
 		 {
-		
-		
-		
 		if(scanstatus.equalsIgnoreCase("yes"))
 		{
 		String ZAP_PROXY_ADDRESS = "localhost";
@@ -203,7 +202,9 @@ public class Testcase_Execution extends testexecutionbase
 		
 		Fillo fillo = new Fillo();
 		System.out.println("Size: " + "test");
-		inputfilelocation = System.getProperty("user.dir")+"\\Input\\Execution_input.xlsx";
+		inputfilelocation = "F:\\QA_REPO\\Selenium_UI_Framework\\Input\\Execution_input.xlsx";
+		System.out.println("file: " + inputfilelocation);	
+				//System.getProperty("user.dir")+"\\Input\\Testcase_input.xlsx";
 		Connection connection = fillo.getConnection(inputfilelocation);
 		Recordset recordset = connection.executeQuery("SELECT * FROM Execution");
 		int numberOfRows = recordset.getCount();
